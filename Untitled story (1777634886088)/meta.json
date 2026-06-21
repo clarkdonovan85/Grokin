@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "id": 1777634886088,
+    "title": "Untitled story",
+    "createdTime": 1777634886088,
+    "lastEditTime": 1777634899208,
+    "pinned": false,
+    "folderPath": "",
+    "autoNameAttempted": false
+  },
+  "storyData": {
+    "format": "perchance-ai-story-v1",
+    "storyOverview": "",
+    "storySoFar": "",
+    "whatHappensNext": "",
+    "storyArcInstruction": "",
+    "paragraphLimit": -1,
+    "backgroundVisual": "",
+    "backgroundMusic": "",
+    "customBackgrounds": [],
+    "customMusic": [],
+    "hideDefaultBackgrounds": false,
+    "hideDefaultMusic": false,
+    "musicRepeatMode": "repeat",
+    "themeSettingsByScheme": null,
+    "notebook": {
+      "tabs": [
+        {
+          "id": "tab_1777634886088_ul58",
+          "title": "Page 1",
+          "content": "",
+          "lastEditedTime": 1777634886088
+        }
+      ],
+      "activeTabId": "tab_1777634886088_ul58"
+    },
+    "sharedIntroMessage": ""
+  }
+}

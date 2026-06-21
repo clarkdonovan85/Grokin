@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "id": 1774946492073,
+    "title": "Chains of the Dying Sun",
+    "createdTime": 1774946492073,
+    "lastEditTime": 1777021202288,
+    "pinned": false,
+    "folderPath": "",
+    "autoNameAttempted": true
+  },
+  "storyData": {
+    "format": "perchance-ai-story-v1",
+    "storyOverview": "",
+    "storySoFar": "",
+    "whatHappensNext": "",
+    "storyArcInstruction": "",
+    "paragraphLimit": -1,
+    "backgroundVisual": "",
+    "backgroundMusic": "",
+    "customBackgrounds": [],
+    "customMusic": [],
+    "hideDefaultBackgrounds": false,
+    "hideDefaultMusic": false,
+    "musicRepeatMode": "repeat",
+    "themeSettingsByScheme": null,
+    "notebook": {
+      "tabs": [
+        {
+          "id": "tab_1778132248384_lbqk",
+          "title": "Page 1",
+          "content": "",
+          "lastEditedTime": 1778132248384
+        }
+      ],
+      "activeTabId": "tab_1778132248384_lbqk"
+    },
+    "sharedIntroMessage": ""
+  }
+}
