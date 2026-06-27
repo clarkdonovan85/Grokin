@@ -1,0 +1,567 @@
+Der Create and Manage Huge Worlds
+we ge Hug
+fem Academy Introduction
+Welcome to the Course
+When making large worlds for your game, performance is something you'll always need to keep in
+mind. Throughout this course, we'll go over a number of methods to increase performance for large
+worlds, these involve:
+* Chunk system for our terrain, only showing chunks near the player. This increases
+performance greatly, as rendering the entire world at once can be quite taxing.
++ Level of detail allows us to lower the quality of a model, the further away it gets.
+* Fog is used in many games (much more noticeable in older ones), to hide where the
+rendering of the world cuts off.
+Now let's get started on the project!
+‘BROS Zena Py Ud. Al ighis reserved, Wipaiacademyzanvacom
+
+Tl ZENVA Create and Manage Huge Worlds in Unity
+leet Academy Course Updated to Unity 2020 LTS
+Course Updated to Unity 2020 LTS
+For this course, we've updated the project files to Unity version 2020.3 (LTS). This is a long term
+support version, which is recommended by Unity. LTS versions get released each year and are stable
+foundation for you to build your projects from:
+For students, this means consistent project files across all courses - no matter when they were
+created. No more downloading different Unity versions, or opening old projects filled with errors.
+How to Install 2020 LTS
+First, open up your Unity Hub and navigate over to the Installs screen. Then, click on the blue Add
+button.
+
+Qunity > 15243 Araitale mB
+
+es Installs tocare
+oan 2020 261 2e2o.108
+
+‘ #260
+013491 86
+«
+
+This will open up a smaller window with a list of Unity versions. Under the Recommended
+Release header, we want to select Unity 2020.3 (LTS). From here, click Next and follow the install
+process.
+‘DRE Zana Py Lad Agi exewed. — WipaTacadamyzanva gam
+
+H ZENVA Create and Manage Huge Worlds in Unity
+dee Academy Course Updated to Unity 2020 LTS
+@© eect aversion ot nty °e
+O ony 202.1381
+oo
+ee
+
+Ta ZENVA Create and Manage Huge Worlds
+l= Academy Generating our Terrain
+Creating our Terrain
+For this project, we're going to be needing a terrain to test out the chunk system with. The
+program L3DT is what we're going to use. This is a free program which can generate terrains with
+various different properties and options. Download L3DT from http:/ww.bundysoft.com/L3DT.
+Download the program, install it, then open it up. To create our terrain, we can click on the new
+terrain icon,
+a
+it_View Operations Layers Tools tensions Scripts Graphs Resources tities Settings Hel
+: (FC Elk BM A SD mel a me
+Make sure you have Designable map selected, then click on the Next button.
+fd Got wens x
+Select project type (us)
+i
+Frac regpinap
+Barc haptna
+y
+Stat than automata goraratd ds map,
+then praite the heghinep, lestae. ee
+Onioa ha Corel
+Keep clicking next until you get to the Calculation queue screen. Here, we want to select all of the
+options.
+‘DI Zewa Py Ld Alghis reseed, ipsTlacademyzenacom
+
+Tip) ZENVA Create and Manage Huge Worlds
+[et Academy Generating our Terrain
+By 307 Wizard x
+Calculation queue (5/9)
+
+EXbesion map
+
+heishtters
+
+EEfriater map
+
+[dbatributes map
+
+Efferainnormats
+
+Bahisht map
+
+[frexture map
+
+«Prev. |{ Cancel
+
+Keep clicking next and then the map will begin to generate. It will take around 30 seconds to a
+minute or so. When this is done, we can see our finished terrain. There are two of these maps we
+need. The first is the Texture map. This is the texture which will be applied to the terrain.
+a
+Then we'll need the Heightfield. This is what we'll apply to our terrain in Unity to automatically
+generate the mesh. It will the whiteness of each pixel. The whiter the pixel is, the higher that point
+on the terrain will be.
+‘BROS Zanva Py Lid A TghTS reseed hipsTacademy zenvacam
+
+JH) ZENVA Create and Manage Huge Worlds
+EL Rakiemy" * Generating our Terrain
+ei
+Let's start by exporting the Texture map. Right click on the tab and select Export layer.
++ Set File format to PNG
+Make sure you have a new (or existing) Unity project and create a new folder inside the asset folder
+called Terrain. Here's were we want to set the File name, calling the texture TerrainTexture.
+Ba L30T Wears x
+Export map
+(Some toes onic ep
+Feaea RG) Poe]
+FHanane [C Werner Dedog Hope]
+inet eet
+aC eteed aes
+vege oat ]
+Onne help ey
+We'll also export the Heightfield
+* Set File format to RAW
++ Set File name to the terrain folder, calling the file TerrainHeightmap
+‘Dw Tana Py UT AT gn Tesowed.————hipsTacadeny zene
+
+[a] ZENVA Create and Manage Huge Worlds
+=e Reademy "Generating our Terrain
+Ba GOT Wears x
+Export map
+seep tes nase)
+Flefamat [RAW ~~) [Options |
+OD | rterame  [EWeentonav este Hopes [=]
+| Pesce tron
+me
+Hage [1028 |
+cas
+In the next lesson, we'll be hopping in Unity to setup our terrain object.
+‘B2018 Zenva Pry Le. A ighs reserved. hips academy zewa om
+
+T= ZENVA Create and Manage Huge Worlds
+lame Academy Setting Up our Terrain in Unity
+Unity Terrain
+Inside of Unity, let’s right click in the Hierarchy and select 3D Object > Terrain. This will create a new
+terrain object.
+== =
+a he
+ea aes
+Select the terrain and click on the Terrain Settings icon. We need to change a few things here.
+vo Terrain Gz
+[Terrain Settings |
+“Vhasic Terrain
+Grouping 10 J
+2c @
+Down in the Mesh Resolution tab, we want to change the terrain width and length to 1024. This is
+because the size of our terrain is 1024x1024 pixels.
+‘Y Mesh Resolution (On TerrainD
+“Terrain width froze
+“Terrain Length a
+‘Terrain Height U
+To import our heightmap, we can click on the Import Raw... button. Find the RAW heightmap and
+open that up.
+‘BROS Zanva Py Lid A TghTS reseed hipsTacademy zenvacam
+
+HB ZENVA Create and Manage Huge Worlds
+Academy. Setting Up our Terrain in Unity
+[feeeeesere ce secre Es oa
+sla feeee age
+— Seen
+= eel
+=
+[= cee
+=———— ee ==
+tz | eee ey oe
+In the Import Heightmap window, we just want to change the Y size to 200. Then click import.
+Import Heightmap
+Raw files must use a single channel and be either € or 16 bit.
+Soret neertentiagines °
+Depth axis os
+width ————
+eight ee_————
+Byte Order (mundo 0)
+Flip Vertically, Oo
+ers
+‘toa =
+To add a terrain texture, we can switch over to the brush tab, then in the drop-down, select Paint
+Texture. Click on the Edit Terrain Layers... button and choose Create Layer... Here, we want to
+find the terrain texture.
+=
+=a —
+= —
+— |
+en
+=
+‘Dw Tana Py UT AT gn Tesowed.————hipsTacadeny zene
+
+i] ZENVA\ Create and Manage Huge Worlds
+leet Academy Setting Up our Terrain in Unity
+You'll notice though that the texture is repeated 1024 times in the width and length. To fix this, we
+can select the new layer and change the Size to 1024, 1024.
+——— aa oS eS Se =
+9 * f eat; Ney  -.
+= 5 eA & oe oe
+y ., ~~
+Pe a oe
+. Aon ee ma eee
+en ae a ——$——
+ae Pa ‘ =
+BN Ge’ wy
+ae) ; Se
+i Figs BP
+= laeaeee ey | |
+One problem though, is that the texture isn’t orientated the right way. To fix this, we can re-import
+our heightmap, this time enabling Flip Vertically.
+Amt eres - KT
+Import Heghonap a
+a i i ip a ear :
+set Ireerenteytenee °
+Depth ry 7
+wath =
+eight 0¢
+iw — ;
+Pp Vervcay |
+eee
+iba 200 >: se ——
+Player Controller
+To make our player controller, let’s start by creating a new capsule object called Player.
+« Add the FPS component
+* Add the Rigidbody component
+Enable Freeze Rotation on all axis’
+‘SaRTS Zana PL A gh esoved. Rips Tacademy zeae
+
+4 ZENVA Create and Manage Huge Worlds
+le Keademy Setting Up our Terrain in Unity
+a REET
+ca See
+: >= ea ees =
+- + = 7 a rH
+es a
+aa =|
+: a
+= - — oo =
+With our camera, drag that in as a child of the player.
+« Set the Position to 0, 1, 0
+* Drag the camera into the Camera property of the FPS component
+isons icc ee
+5 — a a
+ry
+= — — a»
+= = _
+Now you should be able to press play and walk around your terrain. In the next lesson, we'll be
+splitting our terrain into chunks.
+‘DI Zewa Py Ld Alghis reseed, ipsTlacademyzenacom
+
+lap) ZENVA Create and Manage Huge Worlds
+Academy Splitting our Terrain
+Splitting the Terrain
+To split the terrain, let’s open up the split terrain window (Dvornik > Terrain > Split Terrain).
+2 rl = SaleScere nl
+File Edit_Assets GameDbject _ Component Window Hel
+(OREM S [oe (Set) x] Leconte: | @ ciobal] >
+[sium | aT] sant “lp et ese
+vd samslakcone =
+i Diecinal LE
+One Resize terrain
+Poo eau
+=
+ree!
+Select the terrain, then click on the Split terrain button. This will split the terrain into 4 separate
+chunks. You'll notice that the terrain’s texture has been shifted and didn’t carry over with the split.
+This is because all the tiles are still using the same texture and need to be offset. The bottom left tile
+is correct, but with the others, we need to offset them.
+sen a tis
+frat — 3 - aa 4
+Sv x a BS ‘
+- ie pe ae
+: wa eae wr
+ir
+r ~
+’ <2
+as
+Ne a
+Let’s now split each of the 4 terrain chunks, so we have 16 in total. Disable the original terrain
+objects. Delete the original terrain layer.
+‘BROS Zanva Py Lid A TghTS reseed hipsTacademy zenvacam
+
+T= ZENVA Create and Manage Huge Worlds
+Jas Academy Splitting our Terrain
+ae SS Zz Fe 4g
+rine 4 — =
+— <<
+rat a
+aii Rr Po.
+Ba y “ A a
+mai - :
+forenas 5 Js
+a od ee
+aH y Ly ste
+i La i
+7 oe
+Select the bottom left chunk and add a new terrain layer like we done in the last lesson.
+« Set the Size to 1024, 1024
+For the Offset, we don’t need to change that since we're working with the first tile.
+= —— - a
+= i? Mp =
+= Va a
+= | Ye
+=. Cie ne
+= 5 = eo ——
+=a ‘ono — | a
+= Bie eee | | S-- =
+Select the Terrain 0 1 chunk and do the same thing as above.
+* Set the Offset to 0, 256
+‘Dw Tana Py UT AT gn Tesowed.————hipsTacadeny zene
+
+T=) ZENVA Create and Manage Huge Worlds
+eel Academy Splitting our Terrain
+2 Se ee
+
+ce ' y pees rere
+
+aa ie Me) —————
+
+ait St ks ren
+
+= Ma 2? 2 i
+
+cat 4! oT. — a
+Efe eee ee & | Se = ESS
+Now we need to do this for all the other chunks. Creating a new terrain layer with a size of 1024 and
+an offset depending on the tile position. An easy way to do this would be to look at the name of the
+chunk. Terrain 2 3 for example, would have an offset of 512, 768. Multiply the first number by 256
+for the x offset and the second number for the y offset.
+
+= a
+oe fab Seletye ens Suet = —_
+= aoe |
+= Bie eee » SSS one se
+In the next lesson, we'll be setting up the script to toggle the chunks depending on the player
+distance.
+‘Dw Tana Py UT AT gn Tesowed.————hipsTacadeny zene
+
+Ia) ZENVA Create and Manage Huge Worlds
+“== Academy Enabling and Disabling the Chunks
+ChunkHider Script
+Create a new C# script called ChunkHider and attach it to our player object. Opening up the script,
+we can begin with our variables.
+private Terrain[] chunks;
+public float visiblepistance;
+public int chunksize;
+public float checkRate;
+In the Start function, we're going to start by finding all of our chunks and adding them to
+the chunks array. Then, we'll call start calling the CheckChunks function (making it next)
+every checkRate seconds. This is done using the InvokeRepeating method.
+void Start ()
+{
+// get all of the chunks
+chunks = FindobjectsoftypecTerrain>();
+// check the chunks every ‘checkRate' seconds
+InvokeRepeat.ing("CheckChunks", @.0f, checkRate) ;
+}
+CheckChunks is a function which we'll use to check the distance of each chunk from the player. If
+it’s past the visibleDistance, then it will be disabled, otherwise enabled.
+void CheckChunks ()
+{
+Vector3 playerPos = transform.position;
+playerPos.y = 0;
+// loop through each chunk
+foreach(Terrain chunk in chunks)
+{
+// get the center pos of the chunk
+Vector chunkCenterPos = chunk.transform.position + new Vector3(chunkSize / 2
+, 8, chunkSize / 2);
+// check the distance
+if(Vector3.Distance(playerPos, chunkCenterPos) > visibleDistance)
+chunk. gameObject .SetActive( false) ;
+else
+chunk. gameObject .SetActive( true) ;
+}
+}
+Back in the editor, let’s set the chunk hider properties.
+‘T2OTS Zema Pry Ud Al ighis reserved. hips academyzenvacom
+
+Ia) ZENVA Create and Manage Huge Worlds
+fe Academy Enabling and Disabling the Chunks
+* Visible Distance: 500
+* Chunk Size: 256
++ Check Rate: 0.5
+In the next lesson, we'll be setting up a system to hide objects that are in certain terrain chunks.
+‘TROIS Tema Py Ld ANGhIS reserved. hiipaTacademyaenacom
+
+Create and Manage Huge Worlds
+ery ag Ig!
+eel Academy Hiding Objects
+ObjectHider Script
+Create a new C# script called ObjectHider and attach it to all of the terrain chunks. This script will
+enable/disable objects inside that chunk when it gets enabled/disabled.
+Before we begin, we need to create a new tag which we will apply to objects we want to be able to
+hide. Click on the Layers drop-down and select Edit Layers... Here, we want to add a new layer
+called ChunkObject.
+[erconab = cs [facet Mere tayo]
+| omy
+= ©} ‘Tags & Layers oO,
+acs
+Tes [ ChinOble=
+ce
+ee ee
+Layers
+Now select all of the objects you want to be able to hide and add the ChunkObject tag.
+=H ek a =
+a. s = is ae 2 ——
+= > 2. Se ed
+2 he“ . a ee 2
+eet My Come ——
+hee a
+Pe 5 ==
+3 ==
+In the script, let's start by setting up our variables.
+private Bounds bounds;
+private GameObject[] hidableobjects;
+Then in the Awake function, we want to get all of the hidable objects and set our bounds.
+void Awake ()
+{
+// get the hidable objects
+hidableObjects = GameObject .FindGameObjectsWithTag("ChunkObject");
+// get the bounds of the terrain
+Terrain terrain = GetComponent<Terrain>();
+Vector3 dimensions = new Vector3(terrain.terrainData.heightmapwidth, 1000, terrai
+SR
+
+lip) ZENVA\ Create and Manage Huge Worlds
+les Academy Hiding Objects
+n.terrainData.heightmapLength) ;
+
+Vector3 pos = transform.position + new Vector3(dimensions.x / 2, @, dimensions.z
+12);
+
+bounds = new Bounds(pos, dimensions);
+}
+Unity has a few built in functions that can tell us when the chunk the script is on is being enabled or
+disabled. When this happens we want to enable/disable the objects in the chunk.
+void OnEnable ()
+{
+
+foreach(GameObject obj in hidableobjects)
+
+{
+
+f(obj != null @& bounds. Contains(obj.transform.position))
+obj .Setactive(true) ;
+
+}
+}
+void onDisable ()
+{
+
+foreach(GameObject obj in hidableobjects)
+
+{
+
+f(obj != null && bounds. Contains(obj.transform.position))
+obj .Setactive( false) ;
+
+}
+}
+Back in the editor, we can press play and try it out.
+‘T2OTS Zema Pry Ud Al ighis reserved. hips academyzenvacom
+
+Tm ZENVA Create and Manage Huge Worlds
+Jas Academy Level of Detail
+Level of Detail
+Level of detail (LoD) reduces the detail of a model, the further away the camera is. This increases
+performance, especially in huge worlds.
+Fi ZI
+Pitt ey an
+ASN SE — _ — 1
+LODO LOD 1
+In Unity, we can select a terrain tile and go to the Paint Trees tab. Here, we want to click on
+the Edit Trees... button and select Add Tree. Here, just drag in a tree prefab and click Add.
+©
+-— eee TT)
+ae | —e _——__ —_
+a es ——
+‘scale xa ar 22)
+oo ee
+_ ey
+= —~ eS
+ss teem j
+= i
+a , SSS
+ae —<<$<$_
+Sicocwoe 8
+<7 Va Terrain Collier - are
+by = 3
+es
+ee uae
+Now we can paint trees on our terrain and even if we click outside of the selected chunk, it
+automatically carries over to the next one.
+‘BOUTS Zana Py Ld Ag esaved, apace zea
+
+i] ZENVA\ Create and Manage Huge Worlds
+et Academy Level of Detail
+iene. a % ‘ =?
+ae a ee
+pee cee
+5 H
+
+If you zoom in and out you can see the models changing in detail, with the furthest one away being a
+
+2D billboard.
+
+‘BROS Zanva Py Lid A TghTS reseed hipsTacademy zenvacam
+
+[ZENVA Create and Manage Huge Worlds
+Academy Fog
+Fog
+Many games (especially older ones) use fog to hide the max distance that the world is being
+rendered at. It can also be used for both setting the mood of the game and to create the illusion of
+the world being larger than it really is. To create fog, we need to go to the Lighting window (Window
+> Rendering > Lighting Settings).
+Scroll down to the bottom of the window and enable Fog.
+Lightmop Sze
+eee
+‘ctl brace co
+Directional Mode
+re SS ———}
+‘Aves boot a —|
+Ustimeprremetews | (Deine
+‘other Settinas
+reo
+Tesne cote ——
+enaty
+Halo Teeure °
+Hale Strength, —___ :___
+Flare Fade Speed TT
+cones)
+« Set the Color to green
++ Set the Density to 0.04
+Se ———
+> SS
+SSS
+a
+=
+——— —————— ————_
+'igoooeee yy =
+Now let's select the camera and...
+* Set the Clear Flags to Solid Color
+* Set the Background color to the same as the fog
+‘SIS Zana PU ATG seed napsTacaemy envacen
+
+H ZENVA Create and Manage Huge Worlds
+Academy Fog
+aa =I
+You can tweak this however you wish, making the fog denser, a different color, etc.
+‘BROS Zena Py Ud. Al ighis reserved, Wipaiacademyzanvacom
+
+lip) ZENVA Create and Manage Huge Worlds
+lees! Academy Conclusion
+Congratulations on Finishing the Course
+Let’s have a look at what we made:
++ We used L3DT to create a detailed and realistic looking terrain heightmap and texture.
+* Then, it was imported and applied inside of Unity.
++ The chunk was then split into 16 parts and we made a script to toggle them depending on
+the distance from the player.
+* Level of detail, allowed us to lower the quality of models the further away they are,
+increasing performance.
++ Finally, we looked at fog which hid the render distance of the world and can even make it feel
+larger.
+

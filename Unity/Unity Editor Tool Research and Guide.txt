@@ -1,0 +1,449 @@
+The Unity Editor Enhanced: A
+
+Comprehensive Guide to the KUBACHO
+1 te!
+
+LAB 'v-Series' and the Art of Custom
+
+Tool Development
+
+Introduction: Beyond the Default - The Philosophy of a
+
+Streamlined Workflow
+
+The Problem of Friction in Unity Development
+
+The default Unity Editor is a remarkably powerful and flexible environment for game
+
+development. However, as projects grow in scale and complexity, developers often encounter
+
+subtle but persistent points of friction. This friction manifests as cognitive load—the mental
+
+effort required to parse a sprawling hierarchy, the repetitive clicks needed to navigate the
+
+Project window, or the time lost to minor but frequent interruptions while interacting with the
+
+Inspector. While no single action is debilitating, their cumulative effect can significantly
+
+impede productivity, creativity, and overall development velocity. This is the challenge that a
+
+class of "quality of life" editor tools aims to solve: not by adding revolutionary new engine
+
+features, but by sanding down the rough edges of the daily workflow.
+
+Introducing KUBACHO LAB
+
+Emerging from this need for a smoother development experience is KUBACHO LAB, a
+
+publisher on the Unity Asset Store founded by developer Maxim Petrochenko.' The studio's
+
+guiding principle is simple yet profound: "Make Unity feel like home"? This ethos is embodied
+in their flagship suite of editor enhancement tools, collectively known as the "v-series." These
+packages are not disparate utilities but a cohesive ecosystem designed to address specific
+pain points within Unity's core windows: the Hierarchy, the Inspector, the Project window, and
+the Scene view.
+
+The ‘Pragmatic Enhancement Philosophy
+
+To fully appreciate the v-series, it is essential to understand the philosophy that underpins its
+design. These tools were not conceived in a vacuum; they are the product of years of direct
+experience with the Unity Editor's limitations. The developer, "kubacho-lab," has noted
+spending seven years working in Unity without such tools before identifying the specific
+workflow bottlenecks that needed fixing.‘ This history informs a design approach that can be
+described as "Pragmatic Enhancement."
+
+The goal is not to create the most feature-dense or powerful tools on the market, a niche
+occupied by comprehensive systems like Odin Inspector. Instead, the v-series focuses on
+providing intuitive, lightweight, and seamlessly integrated improvements. Across user reviews
+and official descriptions, the assets are consistently praised for being “minimal,” “intuitive,”
+"lightweight," and free of “clutter” or “intrusive features".° The developer explicitly positions
+vinspector 2 as a tool for user experience (UX) improvements that Odin lacks, rather than a
+tool for building highly complex custom editors.’ This deliberate focus results in a suite that
+solves the most common 80% of daily workflow issues with a 20% solution that is performant,
+easy to adopt, and works cohesively across the entire editor.
+
+Overview of the Suite and Versioning
+
+The v-series consists of six primary tools, each targeting a different aspect of the editor. Many
+of these tools exist in both a legacy version 1 and a significantly upgraded version 2. This
+report will focus on the modern version 2 releases, which introduce critical features and
+refinements.° The developer's continued support for version 1 users demonstrates a
+commitment to their customer base and a stable development practice.” The following table
+provides a high-level overview of the suite's components and their interactions.
+
+ec
+vHierarchy 2 | Hierarchy Enhances Custom icons | Icons appear
+visual & colors, in vFavorites 2,
+organization | component vlabs 2, and
+and interaction | minimap, vinspector 2.
+with scene hierarchy lines,
+objects. shortcuts.
+vinspector 2 Inspector Streamlines Component Can display
+component pinning, icons set by
+management | enhanced vHierarchy 2.
+andinspector | copy/paste,
+layout. save in play
+mode,
+attributes.
+Project Adds visual Custom icons | Icons appear
+identifiers to | andcolors for | in vFavorites 2
+project folders. } folders. and vTabs 2.
+Project, Provides a On-demand | Displays icons
+Hierarchy quick-access | popup window, | set by
+bookmarking | paged vHierarchy 2
+system for any | organization, | and vFolders 2.
+asset or shortcuts.
+object.
+vTabs 2 Inspector, Implements} Drag-and-dro_| Displays icons
+Project browser-like | ptabcreation, | set by
+tabbing browser vHierarchy 2
+system for shortcuts, and vFolders 2.
+editor favorite
+windows. layouts.
+Scene Offers Distance, Standalone;
+precision dimension, and | primarily a
+measurement | angle scene view
+and alignment | measurement | utility.
+tools. in the scene
+
+Part I: The 'v-Series' In-Depth Guide
+
+Chapter 1: vHierarchy 2 - Mastering the Scene Outline
+
+Purpose and Value Proposition
+
+In any non-trivial Unity scene, the Hierarchy window can quickly become a monotonous,
+
+hard-to-parse list of GameObjects. Identifying key systems like managers, UI canvases, or
+
+player prefabs requires careful reading and mental mapping. vHierarchy 2 directly addresses
+
+this by transforming the Hierarchy from a simple list into a rich, color-coded, and interactive
+
+scene outline, dramatically reducing the time spent searching for objects.
+
+Core Functionality Deep Dive
+
+‘© Visual Organization: The cornerstone of vHierarchy 2 is its powerful visual
+customization. By holding the Alt key and clicking on a GameObject, a customization
+pop-up appears.” From here, users can assign one of many built-in icons and apply a
+background color to the entry. This allows for the creation of a consistent visual language
+across projects—for example, always coloring manager objects red and UI elements
+blue." The asset also adds subtle but effective readability aids like zebra striping
+alternating row colors) and hierarchy lines that visually connect parent and child
+objects.° For more complex visual organization, empty GameObjects can be styled as
+dividers to break the hierarchy into logical sections.'*
+© Component Minimap: To the right of each GameObject, vHierarchy 2 displays a
+
+"minimap" of its attached components as small icons. This provides an immediate,
+at-a-glance understanding of what an object does without needing to select it and
+inspect its components. For quick edits, Alt-clicking a component icon opens a "mini
+
+editor" in a pop-up window, allowing for adjustments without losing the current Inspector
+selection.®
+
+Enhanced Interaction: A significant workflow enhancement is the ability to interact with
+objects directly in the hierarchy without selecting them first. By simply hovering the
+mouse over an entry, a suite of shortcuts becomes available: press A to toggle the
+object's active state, F to focus the Scene view camera on it, X to delete it, and E to
+expand or collapse its children. Shift-E provides a "solo" expand, collapsing all other
+sibling objects.° These shortcuts eliminate thousands of clicks over the course of a
+project.
+
+Customization and Palettes: The palette of available icons and colors is not fixed. Users
+can add their own custom icons to the selection list, allowing for project-specific visual
+identifiers.’ Furthermore, these customized palettes can be exported and shared among
+team members or used in other projects, ensuring a consistent organizational scheme.°
+For fine-grained control, the developer has noted that additional colors can be added to
+the list by selecting the palette's data object and using the Inspector's debug mode.
+
+Advanced Techniques and Synergies
+
+© Prefab Workflow: A key improvement in version 2 is the ability to set icons and colors
+directly within Prefab Mode. These visual settings are then automatically applied to all
+instances of that prefab placed in a scene, ensuring that, for example, all "Enemy"
+prefabs are instantly recognizable.°
+
+Team Collaboration: By default, vHierarchy stores its data in a central ScriptableObject.
+However, for teams using version control, this can lead to merge conflicts. The asset
+provides an option to store customization data directly within the scene files themselves,
+which is often easier for teams to manage.°
+
+Integration: vHierarchy 2 serves as the visual foundation for the rest of the suite. The
+icons and colors assigned here are automatically recognized and displayed by vFavorites
+2, vTabs 2, and vinspector 2, creating a unified and consistent visual language that
+permeates the entire editor.>
+
+Under the Hood: Technical Insights
+
+The functionality of vHierarchy 2 is achieved through clever use of specific Unity Editor APIs
+designed for extension. The core of the tool is almost certainly built upon the
+
+Editor Application. hierarchyWindowltemOnGUI delegate. This is a special event that Unity
+
+invokes for every visible item in the Hierarchy window, providing two key arguments: the
+instance ID of the GameObject being drawn and a Rect defining the screen space it occupies.
+Within a method subscribed to this delegate, vHierarchy 2 can perform all of its drawing
+operations. It can draw a colored rectangle as a background for zebra striping or custom
+colors. It can then draw the custom icons, the component minimap, and the hierarchy lines
+within the provided Rect. This delegate also allows the script to process mouse events, such
+as detecting an Alt-Click to open the customization menu or a hover event to listen for
+keyboard shortcuts. This approach is highly performant because the code only executes for
+items that are currently visible on screen, which explains the asset's claim of having "no lags
+or freezes".° The settings, colors, and icon palettes are stored persistently in a
+ScriptableObject, which is loaded into memory when the editor starts, a process likely
+initiated by a script with the [InitializeOnLoad] attribute.
+Chapter 2: vinspector 2 - Reinventing Component Interaction
+Purpose and Value Proposition
+The default Unity Inspector, while functional, can be verbose and static. Long lists of public
+variables become difficult to manage, and performing common actions requires navigating
+menus or writing boilerplate code. vinspector 2 addresses this by overhauling the Inspector's
+Ul and providing a powerful, attribute-based system for creating clean, interactive, and highly
+functional custom inspectors without writing a single line of custom editor code.
+Core Functionality Deep Dive
+© UI/UX Enhancements: vinspector 2 introduces several immediate improvements. A
+navigation bar at the top of the Inspector allows for bookmarking objects and navigating
+back and forth through selection history.” Components can be
+Alt-Dragged out of the Inspector to "pin" them in their own floating window, invaluable
+for comparing components or keeping a reference visible.° The UI is further polished with
+smooth animations for collapsing and deleting components, and a "Minimal Mode" can
+be enabled to hide unnecessary buttons and reduce visual clutter.°
+
+‘© Component Management: The asset significantly enhances component workflows. It
+allows for copying multiple components at once and provides distinct options to "Paste
+as new" or "Paste values" onto existing components.’ One of its most celebrated features
+is the ability to save component changes made during Play Mode. Small "save" buttons
+appear on components while the game is running, allowing developers to persist tweaks
+and new values that would normally be lost when exiting Play Mode.”
+
+‘© Shortcuts: A range of keyboard shortcuts speeds up interaction. Ctrl-Shift-E collapses
+or expands all components on a GameObject, while Shift-E solos a single component.
+The A key toggles the selected component's enabled state, and X deletes it.°
+
+‘© The Attribute System: The true power of vinspector 2 lies in its attribute system. By
+adding simple tags above variables or methods in a C# script, developers can radically
+alter how they are displayed in the Inspector.’ Key attributes include:
+
+o “': Turns a method into a clickable button in the Inspector. Version 2 enhances this
+with support for arguments and custom button colors.”
+
+o [Foldout] and **: Organizes groups of variables into collapsible sections or tabs,
+cleaning up long component scripts.
+
+© *': Exposes private, protected, or static variables to the Inspector without making
+them public, adhering to good encapsulation practices.
+
+o [OnValueChanged]: Specifies a method to be called automatically whenever the
+decorated variable's value is changed in the Inspector.
+
+o , ‘[Hidelf]’, : Provide conditional logic for displaying and editing variables based on
+the state of other fields.
+
+© [Variants]: Creates a simple dropdown or button group for a variable, allowing
+developers to choose from a predefined set of values.
+
+Dictionary Serialization: A notorious limitation of Unity's default serializer is its inability
+to handle dictionaries. vinspector 2 provides out-of-the-box support for serializing and
+editing dictionaries directly in the Inspector, a massive quality-of-life improvement for
+data-driven design
+
+Under the Hood and The Odin Comparison
+
+Acommon point of comparison for vinspector 2 is the popular Odin Inspector asset. While
+they appear to solve similar problems, their underlying technical approaches are
+fundamentally different, leading to distinct trade-offs in performance, complexity, and
+stability.
+
+Odin Inspector's core feature is its powerful, proprietary "Odin Serializer.” It completely
+replaces Unity's serialization system for objects that inherit from its SerializedMonoBehaviour.
+This allows it to serialize virtually anything, including complex polymorphic types and
+
+generics."* This is a deep, foundational change that grants immense power at the cost of
+higher performance overhead and a greater risk of compatibility issues between Unity
+versions.*
+vinspector 2, in contrast, is a highly advanced custom renderer that works with Unity’s native
+serialization system. Its attribute system is implemented via a single, global CustomEditor
+script that targets UnityEngine.Object. When drawing the Inspector for any component, this
+script uses C# reflection to scan the object for vinspector’s attributes. It then dynamically
+builds the Inspector UI using standard EditorGUILayout calls, drawing buttons for attributes,
+creating tabs for attributes, and so on, instead of just calling the default
+DrawDefaultinspector() method.
+Its dictionary support is likely achieved by providing a custom SerializableDictionary class that
+implements Unity's |SerializationCallbackReceiver interface. This interface allows the class to
+convert its dictionary into a Unity-friendly format (like two lists for keys and values) before
+serialization and convert it back after deserialization. The custom Inspector then knows how
+to interpret these two lists and draw them as a user-friendly dictionary. This approach
+extends Unity's serializer rather than replacing it, which is the key to its lightweight nature and
+stability.®
+This philosophical and technical divide makes neither tool strictly "better" than the other; they
+are suited for different purposes. The following table clarifies this distinction.
+vinspector 2 Odin inspector
+Core Philosophy Pragmatic Enhancement: Ultimate Power: Full
+Lightweight, intuitive UX serialization replacement
+improvements. for maximum flexibility.
+Primary Use Case Quickly cleaning up Building complex,
+inspectors and adding data-heavy custom editors
+simple interactivity without | and serializing complex
+custom code. data structures.
+Performance Overhead Low. Uses reflection at Higher. Involves a custom
+draw time but leverages serialization pass on top of
+the native serializer. Unity's.”
+Serialization Extends Unity’s serializer Replaces Unity's serializer
+via for derived types.
+
+\SerializationCallbackRecei
+ver.
+Attribute Complexity Smaller, more focused set | Vast library of over 100
+of intuitive attributes.® attributes for fine-grained
+control."°
+Ease of Use Very high. Attributes are Moderate. More powerful
+simple and require no but has a steeper learning
+special setup. curve.
+Learning Curve Low. Can be adopted in Moderate to High. Requires
+minutes. understanding its
+serialization model.
+Licensing Model Standard one-time Complex, with different
+purchase per seat on the tiers and potential
+Asset Store. subscription components.‘
+Chapter 3: vFolders 2 & vFavorites 2 - Taming the Project Window
+Purpose and Value Proposition
+Asa project accumulates thousands of assets, the Project window can become as difficult to
+navigate as a complex scene hierarchy. Finding specific folders or frequently accessed
+prefabs can devolve into a tedious process of scrolling and searching. vFolders 2 and
+vFavorites 2 work in tandem to solve this problem by introducing visual organization and a
+rapid-access bookmarking system.
+vFolders 2 Functionality
+The premise of vFolders 2 is simple but effective: it allows developers to assign custom icons
+
+and background colors to folders in the Project window." This enables the creation of a visual
+hierarchy that makes it easy to identify critical folders—such as "Prefabs," "Scripts," or
+“Art"—at a glance. This visual information is not confined to the Project window; the custom
+folder icons are also displayed in other tools like vFavorites 2 and vTabs 2, reinforcing the
+organizational scheme across the editor." All customization data is stored in a
+ScriptableObject located in a dedicated Assets/vFolders/ directory. For teams using version
+control, this folder can be added to the .gitignore file to allow each developer to maintain their
+own local folder appearance without creating conflicts.’
+
+vFavorites 2 Functionality
+
+vFavorites 2 provides a powerful bookmarking system that goes beyond just folders. Users
+can drag and drop any asset, folder, or even a GameObject from the scene into the vFavorites
+window to create a persistent shortcut." The tool is designed with a minimal footprint; the
+favorites window is not always visible. Instead, it appears as an overlay only when the
+
+Alt key is held down while the mouse is over the Project window, ensuring it never
+permanently occupies valuable screen real estate.'* For better organization, bookmarks can
+be grouped into multiple pages. Navigation is streamlined with shortcuts: the mouse scroll
+wheel can be used to cycle through pages, and the
+
+1-9 number keys provide direct access to the first nine pages."
+
+Under the Hood: Technical Insights
+
+The technical implementation of these two tools mirrors the approach used by vHierarchy.
+vFolders 2 almost certainly uses the EditorApplication.projectWindowltemOnGUI delegate.
+This hook functions identically to its hierarchy counterpart but operates on items in the
+Project window. Within this delegate, the script can draw color overlays and custom icons on
+top of the default folder GUI.
+
+The vFavorites 2 window is a custom EditorWindow. Its clever, on-demand activation is likely
+managed by a script with the [InitializeOnLoad] attribute. This script would subscribe to the
+EditorApplication.update event, which is called many times per second. Inside the update
+loop, the script would check the current event for the state of the Alt key and the position of
+the mouse. If the Alt key is pressed and the mouse cursor is within the bounds of the Project
+
+window, it would call the method to show the EditorWindow. When the key is released or the
+mouse moves away, the window would be closed. This event-driven polling is an efficient way
+to create context-sensitive, non-intrusive Ul.
+
+Chapter 4: vTabs 2 - A Browser-Like Experience in Unity
+
+Purpose and Value Proposition
+
+Managing multiple Inspector or Project windows in Unity often leads to a cluttered workspace
+of floating or docked panels. Switching between a character prefab, an environment asset,
+and a manager object can require multiple clicks and selections. vTabs 2 streamlines this
+entire process by introducing a familiar, web browser-style tabbing system to Unity's core
+windows.
+
+Core Functionality Deep Dive
+
+vTabs 2 allows users to create tabs for nearly anything. Folders, assets, GameObjects, and
+even individual components can be dragged and dropped onto a window to create a new
+tab." This allows a developer to, for example, have one Inspector window with tabs for the
+Player, the GameManager, and the main UI Canvas, and switch between them with a single
+click.
+
+The interaction model is intentionally designed to mimic modern web browsers, making it
+instantly intuitive. Shift-Scroll cycles through open tabs, while Ctrl-Shift-Scroll reorders them.
+Standard shortcuts like Ctrl-T to add a new tab, Ctrl-W to close the current tab, and
+Ctrl-Shift-T to reopen the last closed tab are all supported." For frequently used workflows, a
+set of tabs can be saved as a favorite layout and recalled later, instantly setting up a
+workspace for a specific task."
+
+Under the Hood: Technical Insights
+
+The implementation of vTabs 2 is a particularly insightful example of advanced editor
+scripting. A revealing comment from the developer provides the key to its architecture:
+"There's no other way to reliably implement folder tabs than by using locked project tabs, as
+that's the only way to mimic project window functionality and receive necessary callbacks".®
+This statement implies that vTabs 2 does not create a new, custom type of window from
+scratch. Instead, it manipulates Unity's existing native windows. When a user creates a "folder
+tab," the asset likely performs the following steps programmatically:
+
+1. It creates a new, standard Project window instance.
+
+2. It uses editor scripting to "lock" this new window, which restricts its view to a specific
+
+folder.
+3. It then hides the native window frame and overlays its own custom GUI for the tab bar at
+the top.
+
+The asset maintains a collection of these hidden, locked windows, and when a user clicks on a
+tab, it simply brings the corresponding pre-configured native window to the front. This is a
+complex but brilliant solution. It ensures that all native Project window
+functionality—drag-and-drop, asset import callbacks, right-click context menus—works
+perfectly, because the user is, in fact, interacting with a real Project window. A similar
+technique would be used for Inspector tabs, where each tab corresponds to a locked
+Inspector window. This approach guarantees maximum compatibility and robustness by
+leveraging the native editor components instead of attempting to replicate them.
+Chapter 5: vRuler - Precision Tools for Scene Layout
+Purpose and Value Proposition
+While Unity's grid and snapping tools are useful, they often fall short for tasks requiring
+high-precision measurements and alignments, such as architectural visualization, detailed
+level design, or complex UI placement in world space. vRuler fills this gap by providing a suite
+of measurement tools that operate directly within the Scene View.
+Core Functionality Deep Dive
+
+Asa dedicated measurement utility, vRuler's primary function is to quantify spatial
+relationships within a scene.” While detailed feature lists are less available compared to other
+v-series assets, its functionality can be reliably extrapolated from its purpose and the
+common requirements of such tools. Expected features include:
+* Point-to-Point Measurement: Clicking two points in the scene to display the precise
+distance between them.
+‘* Object Dimensions: Selecting an object to view the dimensions of its bounding box
+along the X, Y, and Z axes.
+* Alignment Guides: Creating temporary lines or planes to help align multiple objects.
+‘* Angle Measurement: Selecting three points to measure the angle between the resulting
+vectors.
+These tools are indispensable for ensuring that game worlds adhere to design specifications
+and maintain a consistent scale.
+Under the Hood: Technical Insights
+The technical foundation for any tool that draws custom interactive elements in the Scene
+View is the combination of the SceneView.duringSceneGui delegate and the
+UnityEditor Handles class. The duringSceneGui event is called during the Scene View's
+drawing loop, allowing scripts to inject their own rendering and input handling.
+The Handles class provides a rich AP! for drawing 3D elements and controls within this
+context. vRuler would use this API extensively. For example, to implement point-to-point
+measurement, the script would:
+1. Subscribe a method to SceneView.duringSceneGui.
+2. Inside this method, listen for mouse clicks to capture 3D world-space coordinates for the
+ruler's start and end points.
+3. Use Handles.DrawLine() to draw a visual line between these two points.
+4. Calculate the distance using Vector3.Distance().
+5. Use Handles.Label() to display the calculated distance as text next to the line in the
+Scene View.
+Interactive elements, like draggable ruler endpoints, would be created using controls like
+Handles.PositionHandle(). This combination of a drawing delegate and the Handles API is the
+standard, performant, and correct way to build custom in-scene editing tools in Unity.
+
